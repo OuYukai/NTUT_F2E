@@ -25,7 +25,7 @@ html{
 
 .header-btn{
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 .header-btn .btn-box{
@@ -49,10 +49,9 @@ html{
 }
 
 .header .LINE{
-  width: 24px;
+  width: 1px;
   height: 24px;
-  right: 112px;
-  top: 0px;
+  margin-left: 12px;
   border-right: 1px solid #778A50;
 }
 
@@ -106,20 +105,22 @@ section .main-content .section-box-1{
     height: 201px;
     margin-top: 32px;
 }
-section .main-content .section-box-1 .title{
-    width: 100%;
-    height: 45px;
-    background-color: #778A50;
-    color: #EDF2C5;
-    display: flex;
-    font-family: 'Noto Sans';
-    font-size: 16px;
-    font-weight: 900;
-    line-height: 24px;
-    text-align: left;
-    align-items: center;
-    padding-left: 30px;
-    border-radius: 3px;
+section .main-content .section-box-1 .section-title{
+  width: 100%;
+  height: 45px;
+  background-color: #778A50;
+  color: #EDF2C5;
+  display: flex;
+  font-family: 'Noto Sans';
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 24px;
+  text-align: left;
+  align-items: center;
+  padding-left: 30px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin: 0;
 }
 section .main-content .section-box-1 .vege-img{
     margin-top: 15px;
@@ -133,6 +134,7 @@ section .main-content .section-box-1 .contact-content{
     background-color: #F7FBDA;
     margin-top: 15px;
     padding: 16px;
+    box-sizing: border-box;
 }
 section .main-content .section-box-1 .contact-content .text{
     font-family: Noto Sans;
@@ -142,9 +144,14 @@ section .main-content .section-box-1 .contact-content .text{
     text-align: left;
     color: #7D7D7D;
 }
-section .smain-content .section-box-1 .contact-content .line{
-    border: 1px solid #7D7D7D;
-    margin: 9px 0px;
+section .main-content .section-box-1 .contact-content .line{
+    border: 1px;
+    width: 496px;
+    height: 1px;
+    background-color: #7D7D7D;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    opacity: 1;
 }
 
 /* footer */
