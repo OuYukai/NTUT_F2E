@@ -1,0 +1,16 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+header {
+    position: fixed;
+    top: 0; left:0; right: 0;
+    background: #000000;
+}
