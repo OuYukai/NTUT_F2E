@@ -1,16 +1,278 @@
-*{
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	/*text-transform: capitalize;*/
+	transition: .2s linear;
 }
 
 header {
-    position: fixed;
-    top: 0; left:0; right: 0;
-    background: #000000;
+	height: 90px;
+	/*position: fixed;*/
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #000000;
+	padding: 2rem 9%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+	box-shadow: 0 .5rem 1rem rbg(0, 0, 0, .1);
+}
+
+header .brand {
+	color: #FFFF;
+	font-weight: bolder;
+}
+
+header .navbar a {
+	padding: 0 1.5rem;
+	color: #FFFFFF;
+	opacity: 78%;
+}
+
+header .icons img {
+	margin-left: 1.5rem;
+}
+
+header .icons img:hover {
+	filter: brightness(3);
+}
+
+
+.home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-width: 1280px;
+	min-height: 600px;
+	background: url(../images/sectionOne_bg.png) no-repeat center/cover;
+	background-size: cover;
+	background-position: center;
+}
+
+.home * {
+	position: relative;
+	z-index: 2;
+}
+
+.home .content {
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+.home .content .text {
+	text-align: center;
+	/* 置中文本 */
+	display: flex;
+	flex-direction: column;
+	/* 垂直排列 */
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	/* 需要時調整高度 */
+	font-size: 4rem;
+	color: #FFFFFF;
+	opacity: 70%;
+}
+
+.home .content .line {
+	display: block;
+	width: 100%;
+	font-size: 110px;
+}
+
+.home .content .start {
+	color: #FFFFFF;
+}
+
+.home .musicbar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.home .musicbar .img {
+	height: 82px;
+}
+
+.home .musicbar .musicinfo {
+	height: 82px;
+	background: rgba(103, 99, 70, 0.77);
+	padding: 1rem;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+.home .musicbar .musicinfo .text {
+	display: flex;
+	flex-direction: column;
+}
+
+.home .musicbar .musicinfo .text .name {
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+.home .musicbar .musicinfo .text .author {
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+.home .musicbar .musicinfo .control {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	/* 控制 control 內圖片與文字的間距 */
+	border-right: 1px solid #ccc;
+	/* 在 control 的左側畫一條線 */
+	padding-left: 10px;
+	/* 給 control 加點內距，使線條不緊貼 */
+}
+
+.home .musicbar .musicinfo .control p {
+	color: #FFFFFF;
+}
+
+.about {
+	background-color: #FFFFFF;
+	min-width: 1280px;
+	min-height: 690px;
+	position: relative;
+}
+
+.about .heading p {
+	font-size: 24px;
+	width: 87px;
+	height: 29px;
+	position: absolute;
+	left: 41px;
+	top: 57px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+
+	color: #000000;
+}
+
+.about .row {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	padding: 2rem 0;
+	padding-bottom: 3rem;
+	position: absolute;
+
+}
+
+.about .row .content .text1 {
+	position: absolute;
+	width: 207px;
+	height: 44px;
+	left: 181px;
+	top: 183px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+
+	color: #000000;
+
+	opacity: 0.52;
+}
+
+.about .row .content .text2 {
+	position: absolute;
+	width: 207px;
+	height: 44px;
+	left: 181px;
+	top: 284px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+
+	color: #000000;
+
+	opacity: 0.52;
+}
+
+.about .row .content .text3 {
+	position: absolute;
+	width: 207px;
+	height: 44px;
+	left: 181px;
+	top: 385px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+
+	color: #000000;
+
+	opacity: 0.52;
+}
+
+.about .row .content .text4 {
+	position: absolute;
+	width: 207px;
+	height: 44px;
+	left: 181px;
+	top: 486px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+
+	color: #000000;
+
+	opacity: 0.52;
+}
+
+.about .row .img {
+	position: relative;
+	/* 確保 .img 容器是相對定位的參考點 */
+}
+
+.about .row .img img {
+	position: absolute;
+	left: 523px;
+	top: 54px;
+}
+
+
+
+.albums {
+	background-color: #000000;
+	min-width: 1280px;
+	min-height: 964px;
+	/* 將 .albums 的高度設為 964px */
+}
+
+.footer {
+	min-width: 1280px;
+	min-height: 290px;
+	/* 將 .footer 的高度設為 290px */
 }
