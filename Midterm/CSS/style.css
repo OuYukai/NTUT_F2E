@@ -13,7 +13,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	margin: 0;
-    padding: 0;
+	padding: 0;
 }
 
 header {
@@ -29,7 +29,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	z-index: 1000;
-	
+
 }
 
 header .brand {
@@ -39,7 +39,7 @@ header .brand {
 }
 
 header .navbar {
-	margin-left:450px;
+	margin-left: 450px;
 }
 
 header .navbar a {
@@ -132,7 +132,7 @@ header .icons img:hover {
 .home .musicbar .musicinfo .text {
 	display: flex;
 	flex-direction: column;
-	margin-left: 40px; 
+	margin-left: 40px;
 }
 
 .home .musicbar .musicinfo .text .name {
@@ -313,8 +313,8 @@ header .icons img:hover {
 }
 
 .contents .images-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	gap: 0;
 	width: 900px;
 	height: 600px;
@@ -325,7 +325,7 @@ header .icons img:hover {
 }
 
 .contents .images-grid img {
-    width: 300px;
+	width: 300px;
 	height: 300px;
 }
 
@@ -472,6 +472,7 @@ header .icons img:hover {
 
 	color: #FFFFFF;
 }
+
 .footer .box2 {
 
 	position: absolute;
@@ -488,6 +489,7 @@ header .icons img:hover {
 
 	color: #FFFFFF;
 }
+
 .footer .box3 {
 
 	position: absolute;
