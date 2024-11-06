@@ -52,7 +52,7 @@ header .volume {
 }
 
 .music1 {
-	background: url(/Midterm/images/ablumBG1.png) no-repeat center/cover;
+	background: url(../images/ablumBG1.png) no-repeat center/cover;
 	position: relative;
 	display: flex;
 	align-items: flex-end;
@@ -104,7 +104,7 @@ header .volume {
 
 
 .music2 {
-	background: url(/Midterm/images/ablumBG2.png) no-repeat center/cover;
+	background: url(../images/ablumBG2.png) no-repeat center/cover;
 	position: relative;
 	display: flex;
 	align-items: flex-end;
@@ -114,7 +114,7 @@ header .volume {
 }
 
 .music3 {
-	background: url(/Midterm/images/ablumBG3.png) no-repeat center/cover;
+	background: url(../images/ablumBG3.png) no-repeat center/cover;
 	position: relative;
 	display: flex;
 	align-items: flex-end;
