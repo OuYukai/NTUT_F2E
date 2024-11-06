@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	transition: .2s linear;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+    padding: 0;
+}
+
+header {
+	height: 90px;
+	/*position: fixed;*/
+    width: 1280px;
+	height: 90px;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #000000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+}
+
+header .brand {
+	color: #FFFF;
+	font-weight: bolder;
+	margin-left: 41px;
+}
+
+header .navbar {
+	
+}
+
+header .navbar a {
+	padding: 0 1.5rem;
+	color: #FFFFFF;
+	opacity: 78%;
+}
+
+header .volume {
+	display: flex;
+	align-items: center;
+}
+
+.music1 {
+    background-color: #FF00FF;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 1280px;
+    height: 690px;
+}
+
+.music1 .albums {
+    width: 604px; 
+    height: 406px;
+
+    position: relative;
+}
+.music1 .albums .cover,
+.music1 .albums .cd {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.music1 .albums .cover,
+.music1 .albums .cover img{
+    width: 406px;
+    height: 406px;
+}
+.music1 .albums .cd,
+.music1 .albums .cd img{
+    width: 354px;
+    height: 354px;
+}
+.music1 .albums .cover {
+    z-index: 2;
+}
+.music1 .albums .cd {
+    margin-left: 249px;
+    margin-top: 26px;
+}
+
+
+.music1 .control {
+    background-color: #FFFF00;
+    width: 200px; 
+    height: 66px;
+    margin-right: 33px;
+    margin-bottom: 26px;
+}
+
+
+.music2 {
+    background-color: #0000FF;
+    min-width: 1280px;
+    min-height: 690px;
+}
+
+.music3 {
+    background-color: #FF0000;
+    min-width: 1280px;
+    min-height: 690px;
+}
+
+.footer {
+    background-color: #FFFF00;
+    min-width: 1280px;
+    min-height: 455px;
+}
+
+
+
+

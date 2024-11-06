@@ -5,28 +5,41 @@
 	outline: none;
 	border: none;
 	text-decoration: none;
-	/*text-transform: capitalize;*/
 	transition: .2s linear;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+    padding: 0;
 }
 
 header {
 	height: 90px;
 	/*position: fixed;*/
+	min-width: 1280px;
+	max-height: 90px;
 	top: 0;
 	left: 0;
 	right: 0;
 	background: #000000;
-	padding: 2rem 9%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	z-index: 1000;
-	box-shadow: 0 .5rem 1rem rbg(0, 0, 0, .1);
+	
 }
 
 header .brand {
 	color: #FFFF;
 	font-weight: bolder;
+	margin-left: 41px;
+}
+
+header .navbar {
+	margin-left:450px;
 }
 
 header .navbar a {
@@ -36,7 +49,7 @@ header .navbar a {
 }
 
 header .icons img {
-	margin-left: 1.5rem;
+	margin-right: 70px;
 }
 
 header .icons img:hover {
@@ -48,9 +61,9 @@ header .icons img:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 	min-width: 1280px;
 	min-height: 600px;
+	margin: 0 auto;
 	background: url(../images/sectionOne_bg.png) no-repeat center/cover;
 	background-size: cover;
 	background-position: center;
@@ -63,6 +76,7 @@ header .icons img:hover {
 
 .home .content {
 	margin: 0 auto;
+	margin-top: 95px;
 	text-align: center;
 	position: relative;
 	z-index: 2;
@@ -70,17 +84,16 @@ header .icons img:hover {
 
 .home .content .text {
 	text-align: center;
-	/* 置中文本 */
 	display: flex;
 	flex-direction: column;
-	/* 垂直排列 */
 	align-items: center;
 	justify-content: center;
 	height: 100%;
-	/* 需要時調整高度 */
 	font-size: 4rem;
+	font-weight: 700;
 	color: #FFFFFF;
 	opacity: 70%;
+	margin-bottom: 19px;
 }
 
 .home .content .line {
@@ -91,14 +104,15 @@ header .icons img:hover {
 
 .home .content .start {
 	color: #FFFFFF;
+	font-weight: 400;
 }
 
 .home .musicbar {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 3rem;
 	gap: 3px;
+	margin-top: 70px;
 }
 
 .home .musicbar .img {
@@ -109,12 +123,10 @@ header .icons img:hover {
 	height: 82px;
 	width: 692px;
 	background: rgba(103, 99, 70, 0.77);
-	padding: 1rem;
 	z-index: 2;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px;
 }
 
 .home .musicbar .musicinfo .text {
@@ -125,23 +137,21 @@ header .icons img:hover {
 
 .home .musicbar .musicinfo .text .name {
 	font-size: 20px;
+	font-weight: 600;
 	color: #FFFFFF;
 }
 
 .home .musicbar .musicinfo .text .author {
 	font-size: 10px;
+	font-weight: 400;
+	margin-top: 23px;
 	color: #FFFFFF;
 }
 
 .home .musicbar .musicinfo .control {
 	display: flex;
 	align-items: center;
-	gap: 10px;
-	/* 控制 control 內圖片與文字的間距 */
-	padding-left: 10px;
-	/* 給 control 加點內距，使線條不緊貼 */
-
-	margin-right: 40px; 
+	margin-right: 57px;
 }
 
 .home .musicbar .musicinfo .control p {
@@ -149,6 +159,7 @@ header .icons img:hover {
 }
 
 .about {
+	display: flex;
 	background-color: #FFFFFF;
 	min-width: 1280px;
 	min-height: 690px;
@@ -498,78 +509,4 @@ header .icons img:hover {
 	position: absolute;
 	top: 197px;
 	left: 1141px;
-}
-
-
-/* 為這些section添加共同的容器樣式 */
-.about,
-.albums,
-.footer {
-    position: relative;
-    min-width: 1280px;
-    margin: 0 auto; /* 使section置中 */
-    overflow: hidden; /* 防止內容溢出 */
-}
-
-
-/* Albums section 特定樣式 */
-.albums {
-    min-height: 964px;
-    background-color: #040404;
-}
-
-/* 使用transform來調整albums section中的絕對定位元素 */
-.albums .heading,
-.albums .contents {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1280px;
-}
-
-.albums .icons {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    
-}
-
-.albums .goTop {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* 調整albums中的具體元素位置 */
-.albums .heading p {
-    left: 116px;
-    position: relative;
-}
-
-.albums .icons {
-    left: calc(50% + 524px); /* 調整圖標位置 */
-}
-
-.albums .contents .images-grid {
-    left: 286px;
-    position: relative;
-}
-
-.albums .goTop {
-    left: calc(50% + 524px); /* 調整返回頂部按鈕位置 */
-}
-
-
-.about .heading,
-.about .row{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1280px;
-}
-
-.about .img{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
