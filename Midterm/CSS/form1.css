@@ -52,7 +52,7 @@ header .volume {
 }
 
 .music1 {
-	background: url(../images/ablumBG1.png) no-repeat center/cover;
+	/* background: url(../images/ablumBG1.png) no-repeat center/cover; */
 	position: relative;
 	display: flex;
 	align-items: flex-end;
