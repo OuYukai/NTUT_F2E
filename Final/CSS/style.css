@@ -2,6 +2,28 @@
 	font-family: inter;
 }
 
+/* Color */
+:root {
+	--black-color: #000000;
+	--white-color: #ffffff;
+	--accent-color: #FFD700;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+a {
+color: var(--accent-color);
+text-decoration: none;
+transition: 0.3s;
+}
+
+a:hover {
+color: color-mix(in srgb, var(--accent-color), transparent 25%);
+text-decoration: none;
+}
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -38,8 +60,10 @@
 
 .hero h2 {
 	margin: 0;
-	font-size: 48px;
+	font-size: 110px;
 	font-weight: 700;
+	color: var(--white-color);
+	opacity: 69%;
 }
 
 .hero p {
@@ -49,30 +73,138 @@
 }
 
 .hero .btn-get-started {
-	color: var(--contrast-color);
-	background: var(--accent-color);
-	font-family: var(--heading-font);
+	color: var(--white-color);
 	text-transform: uppercase;
 	font-weight: 600;
-	font-size: 12px;
+	font-size: 20px;
 	letter-spacing: 1px;
 	display: inline-block;
-	padding: 12px 40px;
+	padding: 8px 35px 10px 35px;
 	border-radius: 50px;
+	border: 2px solid color-mix(in srgb, var(--accent-color) 50%, white 20%);
 	transition: 0.5s;
 	margin-top: 30px;
 }
 
 .hero .btn-get-started:hover {
-	background: color-mix(in srgb, var(--accent-color) 90%, white 20%);
+	background: color-mix(in srgb, var(--accent-color) 50%, white 20%);
 }
 
 @media (max-width: 768px) {
 	.hero h2 {
-		font-size: 32px;
+		font-size: 64px;
 	}
 
 	.hero p {
 		font-size: 18px;
 	}
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.navbar .container .navbar-brand {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+/* Desktop Navigation */
+@media (min-width: 768px) {
+	.collapse {
+	  padding: 0;
+	}
+  
+	.collapse ul {
+	  margin: 0;
+	  padding: 0;
+	  display: flex;
+	  list-style: none;
+	  align-items: center;
+	}
+  
+	.collapse li {
+	  position: relative;
+	}
+  
+	.collapse>ul>li {
+	  white-space: nowrap;
+	  padding: 15px 14px;
+	}
+  
+	.collapse>ul>li:last-child {
+	  padding-right: 0;
+	}
+  
+	.collapse a,
+	.collapse a:focus {
+	  color: var(--accent-color);
+	  font-size: 15px;
+	  padding: 0 2px;
+	  font-weight: 400;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  white-space: nowrap;
+	  transition: 0.3s;
+	  position: relative;
+	}
+  
+	.collapse a i,
+	.collapse a:focus i {
+	  font-size: 12px;
+	  line-height: 0;
+	  margin-left: 5px;
+	  transition: 0.3s;
+	}
+  
+	.collapse>ul>li>a:before {
+	  content: "";
+	  position: absolute;
+	  height: 2px;
+	  bottom: -6px;
+	  left: 0;
+	  background-color: var(--accent-color);
+	  visibility: hidden;
+	  width: 0px;
+	  transition: all 0.3s ease-in-out 0s;
+	}
+  
+	.collapse a:hover:before,
+	.collapse li:hover>a:before,
+	.collapse .active:before {
+	  visibility: visible;
+	  width: 25px;
+	}
+  
+	.collapse li:hover>a,
+	.collapse .active,
+	.collapse .active:focus {
+	  color: var(--accent-color);
+	}
+  }
+
+/*--------------------------------------------------------------
+# Albums Section
+--------------------------------------------------------------*/
+.main-text h1{
+	text-align: left;
+	font-size: 55px;
+	font-weight: 700;
+	color: var(--white-color);
+}
+
+.album .card {
+	border-radius: 5px;
+	border: none;
+}
+
+.album .card .img {
+	border-radius: 5px;
+}
+
+.album .card h5 {
+	text-align: right;
+	font-size: 24px;
+	font-weight: 700;
+	color: color-mix(in srgb, var(--white-color) 50%, white 100%);
 }
