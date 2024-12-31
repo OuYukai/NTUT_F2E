@@ -193,9 +193,21 @@ text-decoration: none;
 	color: var(--white-color);
 }
 
+.album {
+    position: relative;
+    overflow: hidden;
+}
+
 .album .card {
 	border-radius: 5px;
 	border: none;
+	position: relative;
+	overflow: hidden;
+}
+
+.album .card :hover {
+	background-color: color-mix(in srgb, var(--accent-color) 40%, white 0%);
+	transition: background-color 0.3s ease;
 }
 
 .album .card .img {
@@ -206,5 +218,48 @@ text-decoration: none;
 	text-align: right;
 	font-size: 24px;
 	font-weight: 700;
-	color: color-mix(in srgb, var(--white-color) 50%, white 100%);
+	color: var(--white-color);
+	pointer-events: none;
+	opacity: 0;
+	transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+.card:hover .card-img-overlay h5 {
+	opacity: 1; /* 顯示文字 */
+	transform: translateY(0); /* 回到原點 */
+}
+
+/* 圖標樣式 */
+.album  .hover-icon {
+	position: absolute;
+	top: 50%; /* 起始位置為卡片的中間 */
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0); /* 初始縮放為0，不可見 */
+	opacity: 0; /* 初始透明度 */
+	font-size: 3rem; /* 圖標大小 */
+	color: var(--white-color); /* 圖標顏色（黃色） */
+	pointer-events: none;
+	transition: transform 0.3s ease, opacity 0.3s ease; /* 動畫效果 */
+}
+
+/* 滑鼠懸停時觸發的效果 */
+.album .card:hover .hover-icon {
+	transform: translate(-50%, -50%) scale(2); /* 放大到正常大小 */
+	opacity: 1; /* 顯示圖標 */
+}
+
+.album .rotate-image img {
+	transition: transform 0.5s ease-in-out;
+	transform-origin: center;
+}
+
+@keyframes spin {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+}
+
