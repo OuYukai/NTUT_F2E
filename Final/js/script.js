@@ -19,12 +19,12 @@ document.querySelectorAll('.card').forEach(card => {
             const currentAngle = getRotationAngle(transformMatrix);
       
             // 確保動畫是順時針旋轉回到 0 度
-            const targetAngle = currentAngle >= 0 ? 360 : 360 + currentAngle;
+            const targetAngle = currentAngle <= 0 ? currentAngle : currentAngle - 360;
       
             // 停止無限旋轉動畫
-            rotateImage.style.animation = '';
+            rotateImage.style.animation = ''; // 停止無限旋轉動畫
             rotateImage.style.transition = 'transform 1s ease-out';
-            rotateImage.style.transform = `rotate(${targetAngle}deg)`;
+            rotateImage.style.transform = `rotate(${targetAngle}deg)`; // 繼續順時針旋轉到下一圈的 0 度
       
             // 回到 0 度
             setTimeout(() => {
@@ -34,13 +34,19 @@ document.querySelectorAll('.card').forEach(card => {
         }
     });
 
-    // 計算旋轉角度函數
+    // 計算旋轉角度的函數
     function getRotationAngle(transformMatrix) {
-        if (transformMatrix === 'none') return 0;
-        const values = transformMatrix.match(/matrix\((.+)\)/)[1].split(', ');
-        const a = parseFloat(values[0]);
-        const b = parseFloat(values[1]);
-        return Math.round(Math.atan2(b, a) * (180 / Math.PI));
+      if (!transformMatrix || transformMatrix === 'none') return 0;
+    
+      const match = transformMatrix.match(/matrix\((.+)\)/);
+      if (!match) return 0; // 如果匹配失敗，返回 0
+    
+      const values = match[1].split(', ');
+      const a = parseFloat(values[0]);
+      const b = parseFloat(values[1]);
+      const angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+    
+      return angle; // 確保返回的角度是正值
     }
   });
   

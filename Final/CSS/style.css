@@ -25,82 +25,6 @@ text-decoration: none;
 
 
 /*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-.hero {
-	width: 100%;
-	min-height: calc(100vh - 82px);
-	position: relative;
-	padding: 80px 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-@media (max-width: 1200px) {
-	.hero {
-		min-height: calc(100vh - 68px);
-	}
-}
-
-.hero img {
-	position: absolute;
-	inset: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	z-index: 1;
-}
-
-.hero .container {
-	position: relative;
-	z-index: 3;
-}
-
-.hero h2 {
-	margin: 0;
-	font-size: 110px;
-	font-weight: 700;
-	color: var(--white-color);
-	opacity: 69%;
-}
-
-.hero p {
-	margin: 10px 0 0 0;
-	font-size: 24px;
-	color: var(--heading-color);
-}
-
-.hero .btn-get-started {
-	color: var(--white-color);
-	text-transform: uppercase;
-	font-weight: 600;
-	font-size: 20px;
-	letter-spacing: 1px;
-	display: inline-block;
-	padding: 8px 35px 10px 35px;
-	border-radius: 50px;
-	border: 2px solid color-mix(in srgb, var(--accent-color) 50%, white 20%);
-	transition: 0.5s;
-	margin-top: 30px;
-}
-
-.hero .btn-get-started:hover {
-	background: color-mix(in srgb, var(--accent-color) 50%, white 20%);
-}
-
-@media (max-width: 768px) {
-	.hero h2 {
-		font-size: 64px;
-	}
-
-	.hero p {
-		font-size: 18px;
-	}
-}
-
-/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 .navbar .container .navbar-brand {
@@ -184,8 +108,90 @@ text-decoration: none;
   }
 
 /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+	width: 100%;
+	min-height: calc(100vh - 82px);
+	position: relative;
+	padding: 80px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 1200px) {
+	.hero {
+		min-height: calc(100vh - 68px);
+	}
+}
+
+.hero img {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 1;
+}
+
+.hero .container {
+	position: relative;
+	z-index: 3;
+}
+
+.hero h2 {
+	margin: 0;
+	font-size: 110px;
+	font-weight: 700;
+	color: var(--white-color);
+	opacity: 69%;
+}
+
+.hero p {
+	margin: 10px 0 0 0;
+	font-size: 24px;
+	color: var(--heading-color);
+}
+
+.hero .btn-get-started {
+	color: var(--white-color);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 20px;
+	letter-spacing: 1px;
+	display: inline-block;
+	padding: 8px 35px 10px 35px;
+	border-radius: 50px;
+	border: 2px solid color-mix(in srgb, var(--accent-color) 50%, white 20%);
+	transition: 0.5s;
+	margin-top: 30px;
+}
+
+.hero .btn-get-started:hover {
+	background: color-mix(in srgb, var(--accent-color) 50%, white 20%);
+}
+
+@media (max-width: 768px) {
+	.hero h2 {
+		font-size: 64px;
+	}
+
+	.hero p {
+		font-size: 18px;
+	}
+}
+
+
+/*--------------------------------------------------------------
 # Albums Section
 --------------------------------------------------------------*/
+.main-text {
+	position: relative;
+	z-index: 10;
+}
+
 .main-text h1{
 	text-align: left;
 	font-size: 55px;
@@ -249,7 +255,19 @@ text-decoration: none;
 	opacity: 1; /* 顯示圖標 */
 }
 
+.album .rotate-image {
+    width: 100%;
+    height: auto;
+	position: absolute;
+    left: -50%;
+    top: 50%;
+	transform: translateY(-50%);
+	
+}
+
 .album .rotate-image img {
+	width: 100%;
+    height: 100%;
 	transition: transform 0.5s ease-in-out;
 	transform-origin: center;
 }
@@ -261,5 +279,21 @@ text-decoration: none;
 	to {
 	  transform: rotate(360deg);
 	}
+}
+
+/*--------------------------------------------------------------
+# Footer Section
+--------------------------------------------------------------*/
+
+.footer {
+	background-image: url(../images/footer_BG.png);
+    background-size: cover; /* 圖片填滿容器，保持比例 */
+    background-repeat: no-repeat; /* 防止圖片重複 */
+    background-position: center; /* 圖片置中 */
+}
+
+.footer p{
+	font-size: 18px;
+	font-weight: 500;
 }
 
