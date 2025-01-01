@@ -49,4 +49,6 @@ document.querySelectorAll('.card').forEach(card => {
       return angle; // 確保返回的角度是正值
     }
   });
+
+  
   
