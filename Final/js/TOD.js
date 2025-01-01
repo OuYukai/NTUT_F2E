@@ -32,16 +32,9 @@ function setup() {
 
 	uploadAnim = select('#uploading-animation');
 
-    let canvas = createCanvas(windowWidth, windowHeight);
-    canvas.parent('p5-container');
+	let canvas = createCanvas(windowWidth, windowHeight);
+	canvas.parent('p5-container');
 
-	toggleBtn = createButton("Play / Pause");
-
-	uploadBtn = createFileInput(uploaded);
-
-	uploadBtn.addClass("upload-btn");
-	
-	toggleBtn.addClass("toggle-btn");
 
 	//toggleBtn.mousePressed(toggleAudio);
 
@@ -62,7 +55,7 @@ function draw() {
 	if (uploadLoading) {
 		uploadAnim.addClass('is-visible');
 	} else {
-//		uploadAnim.removeClass('is-visible');
+		//		uploadAnim.removeClass('is-visible');
 	}
 
 	background(colorPalette[0]);
@@ -153,12 +146,14 @@ function polygon(x, y, radius, npoints) {
 	endShape(CLOSE);
 }
 
+/*
 function mouseClicked() {
 	if (audio.isPlaying()) {
 		audio.pause();
-        noLoop();
+		noLoop();
 	} else {
 		audio.play();
-        loop();
+		loop();
 	}
 }
+	*/

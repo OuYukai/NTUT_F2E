@@ -13,14 +13,14 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 a {
-color: var(--accent-color);
-text-decoration: none;
-transition: 0.3s;
+	color: var(--accent-color);
+	text-decoration: none;
+	transition: 0.3s;
 }
 
 a:hover {
-color: color-mix(in srgb, var(--accent-color), transparent 25%);
-text-decoration: none;
+	color: color-mix(in srgb, var(--accent-color), transparent 25%);
+	text-decoration: none;
 }
 
 
@@ -35,77 +35,77 @@ text-decoration: none;
 /* Desktop Navigation */
 @media (min-width: 768px) {
 	.collapse {
-	  padding: 0;
+		padding: 0;
 	}
-  
+
 	.collapse ul {
-	  margin: 0;
-	  padding: 0;
-	  display: flex;
-	  list-style: none;
-	  align-items: center;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		list-style: none;
+		align-items: center;
 	}
-  
+
 	.collapse li {
-	  position: relative;
+		position: relative;
 	}
-  
+
 	.collapse>ul>li {
-	  white-space: nowrap;
-	  padding: 15px 14px;
+		white-space: nowrap;
+		padding: 15px 14px;
 	}
-  
+
 	.collapse>ul>li:last-child {
-	  padding-right: 0;
+		padding-right: 0;
 	}
-  
+
 	.collapse a,
 	.collapse a:focus {
-	  color: var(--accent-color);
-	  font-size: 15px;
-	  padding: 0 2px;
-	  font-weight: 400;
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	  white-space: nowrap;
-	  transition: 0.3s;
-	  position: relative;
+		color: var(--accent-color);
+		font-size: 15px;
+		padding: 0 2px;
+		font-weight: 400;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		white-space: nowrap;
+		transition: 0.3s;
+		position: relative;
 	}
-  
+
 	.collapse a i,
 	.collapse a:focus i {
-	  font-size: 12px;
-	  line-height: 0;
-	  margin-left: 5px;
-	  transition: 0.3s;
+		font-size: 12px;
+		line-height: 0;
+		margin-left: 5px;
+		transition: 0.3s;
 	}
-  
+
 	.collapse>ul>li>a:before {
-	  content: "";
-	  position: absolute;
-	  height: 2px;
-	  bottom: -6px;
-	  left: 0;
-	  background-color: var(--accent-color);
-	  visibility: hidden;
-	  width: 0px;
-	  transition: all 0.3s ease-in-out 0s;
+		content: "";
+		position: absolute;
+		height: 2px;
+		bottom: -6px;
+		left: 0;
+		background-color: var(--accent-color);
+		visibility: hidden;
+		width: 0px;
+		transition: all 0.3s ease-in-out 0s;
 	}
-  
+
 	.collapse a:hover:before,
 	.collapse li:hover>a:before,
 	.collapse .active:before {
-	  visibility: visible;
-	  width: 25px;
+		visibility: visible;
+		width: 25px;
 	}
-  
+
 	.collapse li:hover>a,
 	.collapse .active,
 	.collapse .active:focus {
-	  color: var(--accent-color);
+		color: var(--accent-color);
 	}
-  }
+}
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -192,7 +192,7 @@ text-decoration: none;
 	z-index: 10;
 }
 
-.main-text h1{
+.main-text h1 {
 	text-align: left;
 	font-size: 55px;
 	font-weight: 700;
@@ -200,8 +200,8 @@ text-decoration: none;
 }
 
 .album {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
 
 .album .card {
@@ -228,56 +228,67 @@ text-decoration: none;
 	pointer-events: none;
 	opacity: 0;
 	transform: translateY(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+	transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .card:hover .card-img-overlay h5 {
-	opacity: 1; /* 顯示文字 */
-	transform: translateY(0); /* 回到原點 */
+	opacity: 1;
+	/* 顯示文字 */
+	transform: translateY(0);
+	/* 回到原點 */
 }
 
 /* 圖標樣式 */
-.album  .hover-icon {
+.album .hover-icon {
 	position: absolute;
-	top: 50%; /* 起始位置為卡片的中間 */
+	top: 50%;
+	/* 起始位置為卡片的中間 */
 	left: 50%;
-	transform: translate(-50%, -50%) scale(0); /* 初始縮放為0，不可見 */
-	opacity: 0; /* 初始透明度 */
-	font-size: 3rem; /* 圖標大小 */
-	color: var(--white-color); /* 圖標顏色（黃色） */
+	transform: translate(-50%, -50%) scale(0);
+	/* 初始縮放為0，不可見 */
+	opacity: 0;
+	/* 初始透明度 */
+	font-size: 3rem;
+	/* 圖標大小 */
+	color: var(--white-color);
+	/* 圖標顏色（黃色） */
 	pointer-events: none;
-	transition: transform 0.3s ease, opacity 0.3s ease; /* 動畫效果 */
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	/* 動畫效果 */
 }
 
 /* 滑鼠懸停時觸發的效果 */
 .album .card:hover .hover-icon {
-	transform: translate(-50%, -50%) scale(2); /* 放大到正常大小 */
-	opacity: 1; /* 顯示圖標 */
+	transform: translate(-50%, -50%) scale(2);
+	/* 放大到正常大小 */
+	opacity: 1;
+	/* 顯示圖標 */
 }
 
 .album .rotate-image {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 	position: absolute;
-    left: -50%;
-    top: 50%;
+	left: -50%;
+	top: 50%;
 	transform: translateY(-50%);
-	
+
 }
 
 .album .rotate-image img {
 	width: 100%;
-    height: 100%;
+	height: 100%;
 	transition: transform 0.5s ease-in-out;
 	transform-origin: center;
 }
 
 @keyframes spin {
 	from {
-	  transform: rotate(0deg);
+		transform: rotate(0deg);
 	}
+
 	to {
-	  transform: rotate(360deg);
+		transform: rotate(360deg);
 	}
 }
 
@@ -287,12 +298,15 @@ text-decoration: none;
 
 .footer {
 	background-image: url(../images/footer_BG.png);
-    background-size: cover; /* 圖片填滿容器，保持比例 */
-    background-repeat: no-repeat; /* 防止圖片重複 */
-    background-position: center; /* 圖片置中 */
+	background-size: cover;
+	/* 圖片填滿容器，保持比例 */
+	background-repeat: no-repeat;
+	/* 防止圖片重複 */
+	background-position: center;
+	/* 圖片置中 */
 }
 
-.footer p{
+.footer p {
 	font-size: 18px;
 	font-weight: 500;
 }
@@ -302,19 +316,19 @@ text-decoration: none;
 # AlbumCD Section
 --------------------------------------------------------------*/
 .albumCD .main-text {
-	
+
 	z-index: 10;
 }
 
-.albumCD.main-text h1{
+.albumCD.main-text h1 {
 	font-size: 55px;
 	font-weight: 700;
 	color: var(--white-color);
 }
 
 .albumCD {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
 
 .albumCD .card {
@@ -341,31 +355,41 @@ text-decoration: none;
 	pointer-events: none;
 	opacity: 0;
 	transform: translateY(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+	transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .albumCD .card:hover .card-img-overlay h5 {
-	opacity: 1; /* 顯示文字 */
-	transform: translateY(0); /* 回到原點 */
+	opacity: 1;
+	/* 顯示文字 */
+	transform: translateY(0);
+	/* 回到原點 */
 }
 
 /* 圖標樣式 */
-.albumCD  .hover-icon {
+.albumCD .hover-icon {
 	position: absolute;
-	top: 50%; /* 起始位置為卡片的中間 */
+	top: 50%;
+	/* 起始位置為卡片的中間 */
 	left: 50%;
-	transform: translate(-50%, -50%) scale(0); /* 初始縮放為0，不可見 */
-	opacity: 0; /* 初始透明度 */
-	font-size: 3rem; /* 圖標大小 */
-	color: var(--white-color); /* 圖標顏色（黃色） */
+	transform: translate(-50%, -50%) scale(0);
+	/* 初始縮放為0，不可見 */
+	opacity: 0;
+	/* 初始透明度 */
+	font-size: 3rem;
+	/* 圖標大小 */
+	color: var(--white-color);
+	/* 圖標顏色（黃色） */
 	pointer-events: none;
-	transition: transform 0.3s ease, opacity 0.3s ease; /* 動畫效果 */
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	/* 動畫效果 */
 }
 
 /* 滑鼠懸停時觸發的效果 */
 .albumCD .card:hover .hover-icon {
-	transform: translate(-50%, -50%) scale(2); /* 放大到正常大小 */
-	opacity: 1; /* 顯示圖標 */
+	transform: translate(-50%, -50%) scale(2);
+	/* 放大到正常大小 */
+	opacity: 1;
+	/* 顯示圖標 */
 }
 
 .albumCD .rotate-image img {
@@ -375,46 +399,85 @@ text-decoration: none;
 	animation: spin 2s linear infinite;
 }
 
-.albumCD .cd{
+.albumCD .cd {
 	transform: translateX(50%);
 }
 
 .albumCD .bgimg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 0; /* 確保背景圖片位於最底層 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	z-index: 0;
+	/* 確保背景圖片位於最底層 */
 }
 
 .albumCD .container {
-    position: relative;
-    z-index: 1; /* 將內容放在背景圖片上方 */
+	position: relative;
+	z-index: 1;
+	/* 將內容放在背景圖片上方 */
 }
 
 .albumCD {
-	height: 690px; /* 讓區塊高度跟背景圖片高度一致 */
+	height: 690px;
+	/* 讓區塊高度跟背景圖片高度一致 */
 }
 
 .albumCD .bgimg {
-	height: 100%; /* 確保背景圖片完全顯示 */
+	height: 100%;
+	/* 確保背景圖片完全顯示 */
 	width: 100%;
 	object-fit: cover;
 }
 
 .albumCD .bgimg img {
-	height: 100%; /* 確保背景圖片完全顯示 */
+	height: 100%;
+	/* 確保背景圖片完全顯示 */
 	width: 100%;
 	object-fit: cover;
 }
 
 #p5-container {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 #p5-container canvas {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover;
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	right: 15px;
+	bottom: -15px;
+	z-index: 99999;
+	background-color: var(--accent-color);
+	width: 44px;
+	height: 44px;
+	border-radius: 50px;
+	transition: all 0.4s;
+}
+
+.scroll-top i {
+	font-size: 24px;
+	color: var(--white-color);
+	line-height: 0;
+}
+
+.scroll-top:hover {
+	background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+	color: var(--white-color);
+}
+
+.scroll-top.active {
+	visibility: visible;
+	opacity: 1;
+	bottom: 15px;
 }
